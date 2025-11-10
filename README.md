@@ -1,2 +1,3 @@
 # clone-tabnews
-Repositório criado para acompanhar o https://curso.dev/
+
+Repositório criado para acompanhar o <https://curso.dev/>
