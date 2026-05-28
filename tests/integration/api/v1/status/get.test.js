@@ -16,7 +16,9 @@ describe("GET /api/v1/status", () => {
       expect(responseBody.dependencies).toBeDefined();
       expect(responseBody.dependencies.database).toBeDefined();
 
-      expect(responseBody.dependencies.database.opened_connections).toBeDefined();
+      expect(
+        responseBody.dependencies.database.opened_connections,
+      ).toBeDefined();
 
       const parsedUpdatedAt = new Date(responseBody.updated_at).toISOString();
       expect(responseBody.updated_at).toEqual(parsedUpdatedAt);
@@ -25,5 +27,5 @@ describe("GET /api/v1/status", () => {
       expect(responseBody.dependencies.database.max_connections).toBe(100);
       expect(responseBody.dependencies.database.opened_connections).toBe(1);
     });
-  })
-})
+  });
+});
